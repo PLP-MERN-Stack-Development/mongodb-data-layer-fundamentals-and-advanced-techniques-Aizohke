@@ -1,59 +1,87 @@
-# MongoDB Fundamentals - Week 1
+# 📚 PLP Bookstore – MongoDB Assignment (Week 1)
 
-## Setup Instructions
+## 🚀 Objective
+This project demonstrates the fundamentals of MongoDB, including:
+- Installation and setup
+- Creating databases and collections
+- Performing CRUD operations
+- Writing advanced queries with filtering, projection, sorting, and pagination
+- Using aggregation pipelines for data analysis
+- Implementing indexing for performance optimization
 
-Before you begin this assignment, please make sure you have the following installed:
+---
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
+## 📂 Project Structure
+- **insert_books.js** → Script to populate the `plp_bookstore` database with sample book data  
+- **queries.js** → Contains all MongoDB queries (CRUD, advanced queries, aggregation, indexing)  
+- **README.md** → Documentation and instructions  
+- **screenshot.png** → Screenshot of MongoDB Compass/Atlas showing the `books` collection with sample data  
 
-### Node.js Package Setup
+---
 
-Once you have Node.js installed, run the following commands in your assignment directory:
+## 🛠️ Setup Instructions
 
+### 1. Install MongoDB
+- Option A: [Download MongoDB Community Edition](https://www.mongodb.com/try/download/community) and install locally  
+- Option B: [Create a free MongoDB Atlas cluster](https://www.mongodb.com/atlas/database)  
+
+### 2. Clone the Repository
 ```bash
-# Initialize a package.json file
-npm init -y
+git clone <https://github.com/PLP-MERN-Stack-Development/mongodb-data-layer-fundamentals-and-advanced-techniques-Aizohke.git>
+cd <mongodb-data-layer-fundamentals-and-advanced-techniques-Aizohke>
+```
 
-# Install the MongoDB Node.js driver
+### 3. Install Dependencies
+This project uses the official MongoDB Node.js driver.
+```bash
 npm install mongodb
 ```
 
-## Assignment Overview
+### 4. Configure Connection
+- If using **local MongoDB**, keep the URI as:
+  ```
+  mongodb://localhost:27017
+  ```
+- If using **MongoDB Atlas**, replace the URI in both `insert_books.js` and `queries.js` with your Atlas connection string.
 
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
-- Aggregation pipelines
-- Indexing for performance
+---
 
-## Submission
+## ▶️ Running the Scripts
 
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
+### Step 1: Insert Sample Data
+Run the script to populate the database:
+```bash
+node insert_books.js
+```
+This will create the `plp_bookstore` database and insert sample book documents into the `books` collection.
 
-## Getting Started
+### Step 2: Run Queries
+Execute all queries (CRUD, advanced, aggregation, indexing):
+```bash
+node queries.js
+```
+Results will be printed in the terminal, grouped by task.
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+---
 
-## Files Included
+## ✅ Expected Outcomes
+- A functioning MongoDB database (`plp_bookstore`) with a `books` collection
+- CRUD operations (insert, find, update, delete) demonstrated
+- Advanced queries with filtering, projection, sorting, and pagination
+- Aggregation pipelines for analysis (average price by genre, most prolific author, books by decade)
+- Indexes created and tested with `explain()`
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+---
 
-## Requirements
+---
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+## 📌 Notes
+- All queries are written in **Node.js** using the official MongoDB driver.  
+- Ensure MongoDB is running before executing scripts.  
+- If you re-run `insert_books.js`, it will drop the existing collection and re-insert fresh data.  
 
-## Resources
+---
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+## 👨‍💻 Author
+Prepared by **Isaac Mathenge** for the **PLP MongoDB Week 1 Assignment**.
+```
